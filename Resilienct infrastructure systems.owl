@@ -1,0 +1,721 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/resilience_ontology/Version1"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/resilience_ontology/Version1"
+     versionIRI="urn:absolute:ResilienceOntologyVersion1">
+    <Prefix name="" IRI="http://www.semanticweb.org/resilience_ontology/Version1#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="obda" IRI="https://w3id.org/obda/vocabulary#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Beam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BuildingElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BuildingStorey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BuildingSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chimney"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Column"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Covering"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CurtainWall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Door"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Edge"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Element"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExteriorNode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Feature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FeatureCollection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FeatureGraph"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FloodHazard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Footing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InterFeatureLink"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InteriorFeatureLink"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InteriorNode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Manhole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Member"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Network"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NetworkFeature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NetworkGraph"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NetworkLink"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Node"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Outlet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Project"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Railing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ramp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Road"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoadArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoadLink"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoadLinkSequence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoadNode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoadServiceArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Roof"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sewerpipe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Slab"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Space"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpatialElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stair"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StormwaterDrainageSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Subcatchment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SupplyArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TransportArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TransportLink"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TransportLinkSequence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TransportLinkSet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TransportNode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TransportSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VehicleTrafficArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WaterBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Waterboundarysurface"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Watersurface"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Window"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#BuildingSystemOP"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Connect"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Connected"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DrainedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#FloodHazardOP"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Generate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Inundate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Inundated"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsAdjacentTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#RelAggregates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#RelContainedInSpatialStructure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ResilienceOP"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#StormwaterDrainageSystemOP"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#TransportSystemOP"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#BuildingSystemDP"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#FloodHazardDP"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ResilienceDP"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#StormwaterDrainageSystemDP"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#TransportSystemDP"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Beam"/>
+        <Class IRI="#BuildingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Building"/>
+        <Class IRI="#SpatialElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BuildingElement"/>
+        <Class IRI="#Element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BuildingStorey"/>
+        <Class IRI="#SpatialElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chimney"/>
+        <Class IRI="#BuildingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Column"/>
+        <Class IRI="#BuildingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Covering"/>
+        <Class IRI="#BuildingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurtainWall"/>
+        <Class IRI="#BuildingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Door"/>
+        <Class IRI="#BuildingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Edge"/>
+        <Class IRI="#Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Element"/>
+        <Class IRI="#BuildingSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExteriorNode"/>
+        <Class IRI="#Node"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Feature"/>
+        <Class IRI="#StormwaterDrainageSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FeatureCollection"/>
+        <Class IRI="#Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FeatureGraph"/>
+        <Class IRI="#FeatureCollection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Footing"/>
+        <Class IRI="#BuildingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InterFeatureLink"/>
+        <Class IRI="#Edge"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InteriorFeatureLink"/>
+        <Class IRI="#Edge"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InteriorNode"/>
+        <Class IRI="#Node"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Manhole"/>
+        <Class IRI="#NetworkFeature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Member"/>
+        <Class IRI="#BuildingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Network"/>
+        <Class IRI="#FeatureCollection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NetworkFeature"/>
+        <Class IRI="#FeatureCollection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NetworkGraph"/>
+        <Class IRI="#FeatureCollection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NetworkLink"/>
+        <Class IRI="#Edge"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Node"/>
+        <Class IRI="#Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Outlet"/>
+        <Class IRI="#NetworkFeature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pile"/>
+        <Class IRI="#BuildingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Project"/>
+        <Class IRI="#BuildingSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Railing"/>
+        <Class IRI="#BuildingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ramp"/>
+        <Class IRI="#BuildingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Road"/>
+        <Class IRI="#TransportNode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoadArea"/>
+        <Class IRI="#TransportArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoadLink"/>
+        <Class IRI="#TransportLink"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoadLinkSequence"/>
+        <Class IRI="#TransportLinkSequence"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoadNode"/>
+        <Class IRI="#TransportLinkSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoadServiceArea"/>
+        <Class IRI="#TransportArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Roof"/>
+        <Class IRI="#BuildingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sewerpipe"/>
+        <Class IRI="#NetworkFeature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Slab"/>
+        <Class IRI="#BuildingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Space"/>
+        <Class IRI="#SpatialElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpatialElement"/>
+        <Class IRI="#BuildingSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stair"/>
+        <Class IRI="#BuildingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Subcatchment"/>
+        <Class IRI="#SupplyArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SupplyArea"/>
+        <Class IRI="#Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TransportArea"/>
+        <Class IRI="#TransportSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TransportLink"/>
+        <Class IRI="#TransportSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TransportLinkSequence"/>
+        <Class IRI="#TransportSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TransportLinkSet"/>
+        <Class IRI="#TransportSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TransportNode"/>
+        <Class IRI="#TransportSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VehicleTrafficArea"/>
+        <Class IRI="#TransportArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wall"/>
+        <Class IRI="#BuildingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WaterBody"/>
+        <Class IRI="#FloodHazard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Waterboundarysurface"/>
+        <Class IRI="#FloodHazard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Watersurface"/>
+        <Class IRI="#Waterboundarysurface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Window"/>
+        <Class IRI="#BuildingElement"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Beam"/>
+        <Class IRI="#Chimney"/>
+        <Class IRI="#Column"/>
+        <Class IRI="#Covering"/>
+        <Class IRI="#CurtainWall"/>
+        <Class IRI="#Door"/>
+        <Class IRI="#Footing"/>
+        <Class IRI="#Member"/>
+        <Class IRI="#Pile"/>
+        <Class IRI="#Railing"/>
+        <Class IRI="#Ramp"/>
+        <Class IRI="#Roof"/>
+        <Class IRI="#Slab"/>
+        <Class IRI="#Stair"/>
+        <Class IRI="#Wall"/>
+        <Class IRI="#Window"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Building"/>
+        <Class IRI="#BuildingStorey"/>
+        <Class IRI="#Space"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BuildingSystem"/>
+        <Class IRI="#FloodHazard"/>
+        <Class IRI="#StormwaterDrainageSystem"/>
+        <Class IRI="#TransportSystem"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Edge"/>
+        <Class IRI="#FeatureCollection"/>
+        <Class IRI="#Node"/>
+        <Class IRI="#SupplyArea"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Element"/>
+        <Class IRI="#Project"/>
+        <Class IRI="#SpatialElement"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ExteriorNode"/>
+        <Class IRI="#InteriorNode"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FeatureGraph"/>
+        <Class IRI="#Network"/>
+        <Class IRI="#NetworkFeature"/>
+        <Class IRI="#NetworkGraph"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#InterFeatureLink"/>
+        <Class IRI="#InteriorFeatureLink"/>
+        <Class IRI="#NetworkLink"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Manhole"/>
+        <Class IRI="#Outlet"/>
+        <Class IRI="#Sewerpipe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#RoadArea"/>
+        <Class IRI="#RoadServiceArea"/>
+        <Class IRI="#VehicleTrafficArea"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#TransportArea"/>
+        <Class IRI="#TransportLink"/>
+        <Class IRI="#TransportLinkSequence"/>
+        <Class IRI="#TransportLinkSet"/>
+        <Class IRI="#TransportNode"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#WaterBody"/>
+        <Class IRI="#Waterboundarysurface"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Connect"/>
+        <ObjectProperty IRI="#ResilienceOP"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Connected"/>
+        <ObjectProperty IRI="#ResilienceOP"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#DrainedBy"/>
+        <ObjectProperty IRI="#ResilienceOP"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#FloodHazardOP"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Generate"/>
+        <ObjectProperty IRI="#ResilienceOP"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Inundate"/>
+        <ObjectProperty IRI="#ResilienceOP"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Inundated"/>
+        <ObjectProperty IRI="#ResilienceOP"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#IsAdjacentTo"/>
+        <ObjectProperty IRI="#ResilienceOP"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#RelAggregates"/>
+        <ObjectProperty IRI="#BuildingSystemOP"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#RelContainedInSpatialStructure"/>
+        <ObjectProperty IRI="#BuildingSystemOP"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#StormwaterDrainageSystemOP"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#TransportSystemOP"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#Connect"/>
+        <ObjectProperty IRI="#Connected"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#Inundate"/>
+        <ObjectProperty IRI="#Inundated"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Connect"/>
+        <Class IRI="#TransportSystem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Connected"/>
+        <Class IRI="#BuildingSystem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#DrainedBy"/>
+        <Class IRI="#FloodHazard"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Inundate"/>
+        <Class IRI="#FloodHazard"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Inundated"/>
+        <Class IRI="#BuildingSystem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Inundated"/>
+        <Class IRI="#TransportSystem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsAdjacentTo"/>
+        <Class IRI="#StormwaterDrainageSystem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsAdjacentTo"/>
+        <Class IRI="#TransportSystem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Connect"/>
+        <Class IRI="#BuildingSystem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Connected"/>
+        <Class IRI="#TransportSystem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#DrainedBy"/>
+        <Class IRI="#StormwaterDrainageSystem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Inundate"/>
+        <Class IRI="#BuildingSystem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Inundate"/>
+        <Class IRI="#TransportSystem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Inundated"/>
+        <Class IRI="#FloodHazard"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IsAdjacentTo"/>
+        <Class IRI="#StormwaterDrainageSystem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IsAdjacentTo"/>
+        <Class IRI="#TransportSystem"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#BuildingSystemOP"/>
+        <ObjectProperty IRI="#FloodHazardOP"/>
+        <ObjectProperty IRI="#StormwaterDrainageSystemOP"/>
+        <ObjectProperty IRI="#TransportSystemOP"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#Connect"/>
+        <ObjectProperty IRI="#Connected"/>
+        <ObjectProperty IRI="#DrainedBy"/>
+        <ObjectProperty IRI="#Generate"/>
+        <ObjectProperty IRI="#Inundate"/>
+        <ObjectProperty IRI="#Inundated"/>
+        <ObjectProperty IRI="#IsAdjacentTo"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#RelAggregates"/>
+        <ObjectProperty IRI="#RelContainedInSpatialStructure"/>
+    </DisjointObjectProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#BuildingSystemDP"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#FloodHazardDP"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#ResilienceDP"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#StormwaterDrainageSystemDP"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DisjointDataProperties>
+        <DataProperty IRI="#BuildingSystemDP"/>
+        <DataProperty IRI="#FloodHazardDP"/>
+        <DataProperty IRI="#ResilienceDP"/>
+        <DataProperty IRI="#StormwaterDrainageSystemDP"/>
+        <DataProperty IRI="#TransportSystemDP"/>
+    </DisjointDataProperties>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
