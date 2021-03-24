@@ -1,0 +1,955 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/resilience_ontology/Version1"
+     xml:base="http://www.semanticweb.org/resilience_ontology/Version1"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/resilience_ontology">
+        <owl:versionIRI rdf:resource="urn:absolute:ResilienceOntology"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#BuildingSystemOP -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/resilience_ontology#BuildingSystemOP"/>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Connect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/resilience_ontology#Connect">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ResilienceOP"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/resilience_ontology#Connected"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/resilience_ontology#TransportSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Connected -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/resilience_ontology#Connected">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ResilienceOP"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/resilience_ontology#TransportSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#DrainedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/resilience_ontology#DrainedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ResilienceOP"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/resilience_ontology#FloodHazard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#FloodHazardOP -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/resilience_ontology#FloodHazardOP">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Generate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/resilience_ontology#Generate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ResilienceOP"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Inundate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/resilience_ontology#Inundate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ResilienceOP"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/resilience_ontology#Inundated"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/resilience_ontology#FloodHazard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/resilience_ontology#TransportSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Inundated -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/resilience_ontology#Inundated">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ResilienceOP"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingSystem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/resilience_ontology#TransportSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/resilience_ontology#FloodHazard"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#IsAdjacentTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/resilience_ontology#IsAdjacentTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ResilienceOP"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/resilience_ontology#TransportSystem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/resilience_ontology#TransportSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#RelAggregates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/resilience_ontology#RelAggregates">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingSystemOP"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/resilience_ontology#RelContainedInSpatialStructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#RelContainedInSpatialStructure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/resilience_ontology#RelContainedInSpatialStructure">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingSystemOP"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#ResilienceOP -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/resilience_ontology#ResilienceOP">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingSystem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/resilience_ontology#FloodHazard"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/resilience_ontology#TransportSystem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#TransportSystemOP -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/resilience_ontology#TransportSystemOP">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystemOP -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystemOP">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#BuildingSystemDP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#BuildingSystemDP">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#EdgeDP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#EdgeDP">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#TransportSystemDP"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/resilience_ontology#Road"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#ExpectedLifespanYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#ExpectedLifespanYear">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#FloodHazardDP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#FloodHazardDP">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasArea -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasArea">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#WaterSurfaceDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasAverageDelay -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasAverageDelay">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#EdgeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasAverageSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasAverageSpeed">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#EdgeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasAverageStope -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasAverageStope">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#EdgeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasAverageVolume -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasAverageVolume">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#EdgeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasBasinDepth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasBasinDepth">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasBasinMaterrial -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasBasinMaterrial">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasBedDepth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasBedDepth">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasDepth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasDepth">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#WaterSurfaceDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasDiameter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasDiameter">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasDrainRad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasDrainRad">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasDrianDiameter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasDrianDiameter">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasElementNo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasElementNo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#WaterSurfaceDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasFlowVelocity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasFlowVelocity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#WaterSurfaceDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasFootingDepth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasFootingDepth">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasFootingMaterrial -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasFootingMaterrial">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasGrateMaterrial -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasGrateMaterrial">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasHoleRad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasHoleRad">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasLength">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasManufacturer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasManufacturer">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#EdgeDP"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#WaterSurfaceDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasOutsideRad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasOutsideRad">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasType">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#HasWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#HasWidth">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#MaintenanceSchedule -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#MaintenanceSchedule">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#ManholeDP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#ManholeDP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#ManholeDP">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/resilience_ontology#Manhole"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#ResilienceDP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#ResilienceDP">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#TransportSystemDP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#TransportSystemDP"/>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystem -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystem">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#WaterSurfaceDP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/resilience_ontology#WaterSurfaceDP">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/resilience_ontology#FloodHazardDP"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/resilience_ontology#Watersurface"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Beam -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Beam">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Building -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Building">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#SpatialElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#BuildingElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#BuildingElement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#BuildingStorey -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#BuildingStorey">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#SpatialElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#BuildingSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#BuildingSystem"/>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Chimney -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Chimney">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Column -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Column">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Covering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Covering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#CurtainWall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#CurtainWall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Device">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#DistributionElements -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#DistributionElements">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Door -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Door">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Edge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Edge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#Road"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Element -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Element">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#FloodHazard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#FloodHazard"/>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Footing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Footing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#FunctionalElements -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#FunctionalElements">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Manhole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Manhole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#FunctionalElements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Member -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Member">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#NetworkComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#NetworkComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Node -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Node">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#Road"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Pile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Pile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Pipe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Pipe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#DistributionElements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Project -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Project">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#ProtectiveElements -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#ProtectiveElements">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Railing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Railing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Railway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Railway">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#TransportationComplex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Ramp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Ramp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Road -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Road">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#TransportationComplex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Roof -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Roof">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Slab -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Slab">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Space -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Space">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#SpatialElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#SpatialElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#SpatialElement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Square -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Square">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#TransportationComplex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Stair -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Stair">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#TerminalElements -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#TerminalElements">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Track -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Track">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#TransportationComplex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#TransportSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#TransportSystem"/>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#TransportationComplex -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#TransportationComplex">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#TransportationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#TransportationObject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#TransportationObject">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#TransportSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystem"/>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Wall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Wall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#WaterBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#WaterBody">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#FloodHazard"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/resilience_ontology#Waterboundarysurface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Waterboundarysurface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Waterboundarysurface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#FloodHazard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Watersurface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Watersurface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#Waterboundarysurface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/resilience_ontology#Window -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/resilience_ontology#Window">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/resilience_ontology#BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Beam"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Chimney"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Column"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Covering"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#CurtainWall"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Door"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Footing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Member"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Pile"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Railing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Ramp"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Roof"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Slab"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Stair"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Wall"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Window"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Building"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#BuildingStorey"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Space"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#BuildingSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#FloodHazard"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#TransportSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystem"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Device"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#DistributionElements"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#FunctionalElements"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#NetworkComponent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#ProtectiveElements"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#TerminalElements"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Edge"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Node"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Railway"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Road"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Square"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Track"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Element"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Project"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#SpatialElement"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#BuildingSystemOP"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#FloodHazardOP"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#TransportSystemOP"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystemOP"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Connect"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Connected"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#DrainedBy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Generate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Inundate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#Inundated"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#IsAdjacentTo"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#BuildingSystemDP"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#FloodHazardDP"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#ResilienceDP"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#TransportSystemDP"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/resilience_ontology#UndergroundDrainageSystem"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
